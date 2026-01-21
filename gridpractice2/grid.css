@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+section{
+    /* background: linear-gradient( red, violet); */
+    background-image: linear-gradient(to right, orange,white, green);
+    /* background-image: radial-gradient( orange,white,green); */
+    /* background-image:conic-gradient(orange,white,green); */
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 180px  380px 380px;
+    grid-template-rows: 100px 100px 100px;
+    
+    
+}
+ .box{
+     border: 2px solid  black ;
+     display: grid;
+     justify-content: center;
+     align-content: center;
+     text-transform: capitalize;
+     font-weight: bold;
+     font-size: 20px;
+     
+}
+
+section > header{
+    grid-column: span 3;
+}
+section > #aside1{
+    grid-row: span 2;
+}
+section > footer{
+    grid-column: span 2;
+}
+
+/* header{
+    background-color: red;
+}
+#aside1{
+    background-color: blue;
+}
+#aside2{
+    background-color: green;
+}
+main{
+    background-color: yellow;
+
+}
+footer{
+    background-color: violet;
+}  */
+
+/* grid columns:3; if you simply mention number it will take that place
+if you want to merge the rows or column go for span */
+/* flex is single row  */
