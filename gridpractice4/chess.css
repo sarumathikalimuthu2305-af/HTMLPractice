@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+section{
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-auto-rows: 50px;
+    background:linear-gradient(black,white);
+}
+.black{
+    background-color: black;
+}
+.white{
+    background-color: white;
+}
