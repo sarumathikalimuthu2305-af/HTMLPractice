@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --------- PAGE BACKGROUND (same style + fade-in) --------- */
+body{
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    animation: pageFade 0.8s ease-in-out;
+}
+
+@keyframes pageFade{
+    from{opacity:0; transform:translateY(15px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* --------- INPUT --------- */
+#input{
+    width: 260px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#input:focus{
+    border-color:#667eea;
+    box-shadow: 0 0 8px rgba(102,126,234,0.5);
+    transform: scale(1.02);
+}
+
+/* --------- ADD BUTTON --------- */
+button{
+    padding: 10px 15px;
+    border: none;
+    background: #667eea;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* lift on hover */
+button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* press effect */
+button:active{
+    transform: scale(0.95);
+}
+
+/* --------- LIST --------- */
+ul{
+    list-style: none;
+    margin-top: 20px;
+    width: 320px;
+}
+
+/* each todo item */
+li{
+    background: #f3f3f3;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #667eea;
+
+    /* animation when added */
+    animation: slideIn 0.4s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* slide-in effect */
+@keyframes slideIn{
+    from{transform: translateX(-20px); opacity:0;}
+    to{transform: translateX(0); opacity:1;}
+}
+
+/* hover zoom on todo */
+li:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* --------- DELETE BUTTON (inside li) --------- */
+li button{
+    background: red;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+/* shake on hover */
+li button:hover{
+    background: darkred;
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake{
+    0%{ transform: translateX(0); }
+    25%{ transform: translateX(-2px); }
+    50%{ transform: translateX(2px); }
+    75%{ transform: translateX(-2px); }
+    100%{ transform: translateX(0); }
+}
