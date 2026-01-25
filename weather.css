@@ -1,0 +1,23 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  background-color: skyblue;
+}
+
+input {
+  padding: 8px;
+  width: 200px;
+}
+
+button {
+  padding: 8px 12px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+#output {
+  margin-top: 20px;
+  font-size: 18px;
+}
